@@ -2,3 +2,6 @@
 2 => perl
 3 => awk
 4 => java
+5 => c
+6 => elixir
+7 => julia
