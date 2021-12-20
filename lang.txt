@@ -7,4 +7,6 @@
 7 => julia
 8 => ruby
 9 => php
+# Note: At this point I realized I _could_ use a different language for each challenge.
+#       But do I really want to right now? Maybe next year.
 10 => c
