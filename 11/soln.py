@@ -41,13 +41,18 @@ def step(grid, n):
 
 
 def simulate(grid, steps):
-    flashes = 0
-    for n in range(1, steps + 1):
-        flashes += step(grid, n)
-    return flashes
+    return sum([step(grid, n) for n in range(1, steps + 1)])
+
+def simulate_until(grid, fn):
+    n = 0
+    while True:
+        n += 1
+        if fn(step(grid, n)):
+            return n
 
 if __name__ == "__main__":
     grid = parse()
-    flashes = simulate(grid, 100)
-    print(flashes)
+    size = sum([len(r) for r in grid])
+    step = simulate_until(grid, lambda x: x == size)
+    print(step)
 
